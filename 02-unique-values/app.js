@@ -30,5 +30,12 @@ const menu = [
 // new Set - narrow down
 // ['all',...] - turn it back to array
 
-const categories = new Set(menu.map((item) => item.category));
+const categories = ["all", ...new Set(menu.map((item) => item.category))];
 console.log(categories);
+
+const result = document.querySelector(".result");
+result.innerHTML = categories
+  .map((category) => {
+    return `<button>${category}</button>`;
+  })
+  .join("");
