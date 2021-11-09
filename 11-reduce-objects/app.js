@@ -26,6 +26,7 @@ const cart = [
 
 let { totalItems, cartTotal } = cart.reduce(
   (total, cur) => {
+    console.log(total);
     const { amount, price } = cur;
 
     // count item
