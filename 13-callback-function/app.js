@@ -1,31 +1,16 @@
 function makeUppercase(value) {
-  console.log(value.toUpperCase())
+  console.log(value.toUpperCase());
 }
-// makeUppercase('peter')
 
-function reverseString(value) {
-  console.log(value.split('').reverse().join(''))
+function reverse(value) {
+  console.log(value.split("").reverse().join(""));
 }
 
 function handleName(name, cb) {
-  const fullName = `${name} smith`
-  console.log(fullName)
-  cb(fullName)
+  const fullName = `${name} kim`;
+  cb(fullName);
+  // some more loginc
 }
 
-// handleName('peter', makeUppercase)
-// handleName('peter', reverseString)
-
-const btn = document.querySelector('.btn')
-
-// btn.addEventListener('click', function () {
-//   console.log('hello world')
-// })
-
-btn.addEventListener('click', sayHello)
-
-function sayHello() {
-  console.log('hello people')
-}
-
-// array methods, setTimeout etc
+handleName("patrick", makeUppercase);
+handleName("patrick", reverse);
