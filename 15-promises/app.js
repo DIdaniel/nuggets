@@ -1,22 +1,8 @@
-// Javascript Nuggets - Promises
+const promise = new Promise((res, rej) => {
+  //res([1, 2, 3]);
+  rej("I gotta error");
+});
 
-// async await
-// consume/use promises
+promise.then((data) => console.log(data)).catch((err) => console.error(err));
 
-// Pending, Rejected, FulFilled
-
-const value = 2
-
-const promise = new Promise((resolve, reject) => {
-  const random = Math.floor(Math.random() * 3)
-  console.log(random)
-  if (random === value) {
-    resolve('you guessed correctly')
-  } else {
-    reject('wrong number')
-  }
-})
-
-console.log(promise)
-
-promise.then((data) => console.log(data)).catch((err) => console.log(err))
+console.log(promise);
